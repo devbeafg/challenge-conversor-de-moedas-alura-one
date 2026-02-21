@@ -78,6 +78,7 @@ public class Conversor {
     public void executar(Scanner in, Conversor conversor) {
         converter(in, conversor);
     }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -85,6 +86,6 @@ public class Conversor {
         conversor.show();
         conversor.executar(in,conversor);
 
-        System.out.println("Obrigada por usar nosso sistema!");
+        System.out.println("\nSISTEMA ENCERRADO!\nObrigada por usar nosso sistema!");
     }
 }

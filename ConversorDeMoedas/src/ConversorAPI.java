@@ -25,7 +25,7 @@ public class ConversorAPI {
             Moedas data = gson.fromJson(response.body(), Moedas.class);
 
             if (data == null || data.result() == null || !"success".equalsIgnoreCase(data.result())) {
-                throw new RuntimeException("Falha ao consultar a API. Resposta: " + response.body());
+                throw new RuntimeException("Falha ao consultar a API! Resposta: " + response.body());
             }
 
             return data;
