@@ -33,6 +33,7 @@ public class Conversor {
 
         System.out.print("Digite o valor que deve ser convertido: ");
         double valor;
+
         try {
             valor = Double.parseDouble(in.next().replace(",", "."));
         } catch (NumberFormatException e) {
@@ -48,13 +49,14 @@ public class Conversor {
 
             if (rates == null || !rates.containsKey(destino)) {
                 System.out.println("\nMoeda de destino inválida ou não encontrada: " + destino);
+                decisao(in, conversor);
                 return;
             }
 
             double taxa = rates.get(destino);
             double convertido = valor * taxa;
 
-            System.out.printf("%n%.2f %s = %.2f %s%n", valor, origem, convertido, destino);
+            System.out.printf("%n%.2f %s = %.2f %s%n\n", valor, origem, convertido, destino);
 
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
